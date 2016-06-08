@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ignyt</title>
+        <script type="text/javascript" src="bower_components/requirejs/require.js"></script>
+    </head>
+    <body>
+        <div>
+            <div class="col">
+                <div id="days"></div>
+                <div class="label">days</div>
+            </div>
+            <div class="col">
+                <div id="hours"></div>
+                <div class="label">hours</div>
+            </div>
+            <div class="col">
+                <div id="minutes"></div>
+                <div class="label">minutes</div>
+            </div>
+            <div class="col">
+                <div id="seconds"></div>
+                <div class="label">seconds</div>
+            </div>
+            <div class="col">
+                <div id="milliseconds"></div>
+                <div class="label">milliseconds</div>
+            </div>
+        </div>
+        <button type="button" id="toggle">Toggle</button>
+        Date: <input type="text" id="newDate" />
+        Interval: <input type="text" id="newInterval" />
+        <script>
+        (function(){
+            require(['Ignyt'], function(Ignyt){
+                var days = document.getElementById('days'),
+                    hours = document.getElementById('hours'),
+                    minutes = document.getElementById('minutes'),
+                    seconds = document.getElementById('seconds'),
+                    milliseconds = document.getElementById('milliseconds'),
+                    toggle = document.getElementById('toggle'),
+                    newDate = document.getElementById('newDate'),
+                    newInterval = document.getElementById('newInterval'),
+                    inst = Ignyt.init('July 21, 2016 08:00:00', function(data){
+                        days.innerHTML = data.days;
+                        hours.innerHTML = this.util.padZero(data.hours);
+                        minutes.innerHTML = this.util.padZero(data.minutes);
+                        seconds.innerHTML = this.util.padZero(data.seconds);
+                        milliseconds.innerHTML = this.util.padZero(data.milliseconds);
+                    });
+                    
+                newDate.value = (new Date(inst.date)).toString();
+                newInterval.value = inst.interval;
+                newDate.addEventListener('change', function(){
+                    inst.date = this.value;
+                });
+                newInterval.addEventListener('change', function(){
+                    inst.interval = this.value;
+                });
+                toggle.addEventListener('click', function(){
+                    inst.toggle();
+                });
+            });
+        })();
+        </script>
+    </body>
+</html>

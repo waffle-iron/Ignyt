@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "umd",
+        "target": "es5",
+        "rootDir": "ts",
+        "outDir": "",
+        "noImplicitAny": false,
+        "sourceMap": false
+    },
+    "exclude": [
+        "typings",
+        "lib",
+        ".c9",
+        "node_modules"
+    ]
+}

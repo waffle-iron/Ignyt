@@ -1,0 +1,22 @@
+{
+  "name": "ignyt",
+  "description": "A simple countdown timer",
+  "authors": [
+    "BS3 Technology"
+  ],
+  "license": "Apache-2.0",
+  "main": "Ignyt.js",
+  "moduleType": [
+    "amd",
+    "node"
+  ],
+  "homepage": "https://github.com/bs3tech/Ignyt",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "ts"
+  ]
+}
