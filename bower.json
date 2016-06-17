@@ -15,8 +15,7 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "test",
-    "tests",
-    "ts"
+    "build",
+    "src"
   ]
 }
