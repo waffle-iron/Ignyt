@@ -1,19 +1,26 @@
 {
   "name": "ignyt",
-  "version": "0.0.2",
-  "description": "",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "github": "https://github.com/bs3tech/Ignyt",
+  "version": "0.1.0",
+  "description": "A simple, light-weight count-to utility.",
+  "author": "BS3 Technology <info@bs3.tech> (http://bs3.tech)",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/bs3tech/ignyt#readme",
+  "github": "https://github.com/bs3tech/ignyt",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bs3tech/Ignyt.git"
+    "url": "git+https://github.com/bs3tech/ignyt.git"
   },
-  "author": "BS3 Technology",
-  "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/bs3tech/Ignyt/issues"
+    "url": "https://github.com/bs3tech/ignyt/issues"
   },
-  "homepage": "https://github.com/bs3tech/Ignyt#readme"
+  "keywords": [
+    "ignyt",
+    "js",
+    "countdown",
+    "countup",
+    "count"
+  ],
+  "devDependencies": {
+    "livescript": "^1.5.0"
+  }
 }
