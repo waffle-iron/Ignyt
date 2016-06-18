@@ -21,6 +21,7 @@
     "count"
   ],
   "devDependencies": {
+    "handlebars": "^4.0.5",
     "livescript": "^1.5.0"
   }
 }

@@ -27,9 +27,6 @@
     Util = (function(){
       Util.displayName = 'Util';
       var prototype = Util.prototype, constructor = Util;
-      function Util(){
-        throw Error('unimplemented');
-      }
       Util.padZero = function(num){
         if (10 > num) {
           return "0" + num;
@@ -38,7 +35,7 @@
         }
       };
       Util.parseDate = function(date){
-        var e;
+        var message;
         if (!(date instanceof Date)) {
           if (typeof date === 'number') {
             return date = new Date(date);
@@ -46,14 +43,15 @@
             try {
               return date = new Date(date);
             } catch (e$) {
-              e = e$;
-              throw new Error("Cannot convert type " + typeof date + " to a Date instance.");
+              message = e$.message;
+              throw new Error("Cannot convert type " + typeof date + " to a Date instance. " + message);
             }
           } else {
             throw new Error("Cannot convert type " + typeof date + " to a Date instance.");
           }
         }
       };
+      function Util(){}
       return Util;
     }());
     return Ignyt = (function(){
