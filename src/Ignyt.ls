@@ -1,7 +1,3 @@
-#  Refactoring to allow for at will 
-
-
-
 __ = (factory)~>
     'use strict';
     #   CommonJS
@@ -24,8 +20,6 @@ __ = (factory)~>
         throw new Error "Unexpected environment. Please submit a bug report"
 __ ->
     class Util
-        ->
-            ...
         @pad-zero = (num)->
             if 10 > num then "0#{num}" else num
         @parse-date = (date)->
@@ -35,8 +29,8 @@ __ ->
                 else if typeof date is 'string'
                     try
                         date = new Date date
-                    catch
-                        throw new Error "Cannot convert type #{typeof date} to a Date instance."
+                    catch {message}
+                        throw new Error "Cannot convert type #{typeof date} to a Date instance. #{message}"
                 else
                     throw new Error "Cannot convert type #{typeof date} to a Date instance."
     class Ignyt
